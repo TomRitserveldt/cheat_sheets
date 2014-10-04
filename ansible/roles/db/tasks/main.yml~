@@ -1,0 +1,17 @@
+---
+# file db/tasks/main.yml
+- name: Install MySQL
+  yum: pkg={{item}} state=installed
+  with_items:
+    - mariadb
+    - MySQL-python
+
+- name: Start MariaDB service
+  service: name=mysqld state=running enabled=yes
+
+- name: Create application database
+  mysql_db: name={{ dbname }} state=present
+
+- name: Create application database user
+  mysql_user: name={{ dbuser }} password={{ dbpasswd }}
+                priv=*.*:ALL host='localhost' state=present
