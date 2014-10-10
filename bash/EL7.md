@@ -10,6 +10,7 @@
 | Restart SERVICE                             | `sudo systemctl restart SERVICE.service`         |
 | *Kill* SERVICE (all processes) with SIGTERM | `sudo systemctl kill SERVICE.service`            |
 | *Kill* SERVICE (all processes) with SIGKILL | `sudo systemctl kill -s SIGKILL SERVICE.service` |
+
 | Start SERVICE on boot                       | `sudo systemctl enable SERVICE.service`          |
 
 ## firewall
