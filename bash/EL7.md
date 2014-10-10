@@ -1,9 +1,11 @@
 ## interfaces & ip adressen
-
+| Action                             | Command                |
+| :---                               | :---                   |
 | List interfaces (and IP addresses) | `ip address`, `ip a`   |
 
 ## services
-
+| Action                             | Command                |
+| :---                               | :---                   |
 | List services                               | `systemctl list-units --type service`            |
 | Start SERVICE                               | `sudo systemctl start SERVICE.service`           |
 | Stop SERVICE                                | `sudo systemctl stop SERVICE.service`            |
@@ -14,5 +16,6 @@
 | Start SERVICE on boot                       | `sudo systemctl enable SERVICE.service`          |
 
 ## firewall
-
-| Enabled features in current zone | `firewall-cmd --list-all`            |
+| Action                             | Command                |
+| :---                               | :---                   |
+| Show current firewall rules | `firewall-cmd --list-all`            |
