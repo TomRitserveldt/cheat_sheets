@@ -1,2 +1,2 @@
-cheat_sheets
+cheat sheets
 ============
