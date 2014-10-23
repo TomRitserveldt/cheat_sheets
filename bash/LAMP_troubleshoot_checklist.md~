@@ -18,6 +18,8 @@
   * NETMASK=255.255.255.0
   * NM_CONTROLLED=no
   * ONBOOT="yes"
+* save changes and restart network service(`systemctl restart network.service`)
+* check the ip address `ip a`
 
 #testing PHP
 * `sudo vi /var/www/html/info.php`
