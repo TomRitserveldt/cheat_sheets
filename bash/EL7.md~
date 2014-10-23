@@ -2,6 +2,7 @@
 | Description                             | Command                |
 | :---                               | :---                   |
 | List interfaces (and IP addresses) | `ip address`, `ip a`   |
+| checking the status of the network manager| `systemctl status NetworkManager.service|
 
 ## services
 | Description                             | Command                |
@@ -19,5 +20,6 @@
 | Description                             | Command                |
 | :---                               | :---                   |
 | Show current firewall rules | `firewall-cmd --list-all`            |
-| enable a port | firewall-cmd [--permanent] [--zone=ZONE] --add-port=80/tcp|
-
+| enable a port | `firewall-cmd [--permanent] [--zone=ZONE] --add-port=22/tcp`|
+| delete a port| `firewall-cmd --remove-port=22/tcp` |
+| enable a service by name | `firewall-cmd [--permanent] [--zone=ZONE] --add-service=http` |

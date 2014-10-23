@@ -2,6 +2,8 @@
 | Description                             | Command                |
 | :---                               | :---                   |
 | List interfaces (and IP addresses) | `ip address`, `ip a`   |
+| checking the status of the network manager| `systemctl status NetworkManager.service` |
+| checking which network interface is being managed | `nmcli dev status` |
 
 ## services
 | Description                             | Command                |
