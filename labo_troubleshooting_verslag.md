@@ -57,8 +57,8 @@ firewall regels instellen:
 * `firewall-cmd --reload`
 
 
-alles werkte maar mijn fout was dat de kabel in virtualbox niet aangesloten was.
-[screenshot](http://i.imgur.com/UDGKgSo.png)
+alles werkte maar mijn fout was dat de kabel in virtualbox niet aangesloten was:
+[resultaat screenshot](http://i.imgur.com/UDGKgSo.png)
 
 #gebruikte bronnen
 Mijn eigen cheat sheets voor EL7 & checklist voor het troubleshooten van een LAMP-server:
