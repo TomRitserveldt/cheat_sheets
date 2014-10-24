@@ -21,6 +21,7 @@ sudo vi /etc/sysconfig/network-scripts/ifcfg-enp0s3 aanpassen naar:
     nm_controlled=no
 
 `sudo vi /etc/sysconfig/network-scripts/ifcfg-enp0s8` aanpassen naar:
+
     nm_controlled=no
     bootproto=static
     onboot=yes
@@ -35,14 +36,17 @@ sudo vi /etc/sysconfig/network-scripts/ifcfg-enp0s3 aanpassen naar:
 
 installeer dan mariadb en php php-mysql
 voor mariadb:
+
     `sudo yum install mariadb mariadb-server`
     `sudo systemctl start mariadb`
     `sudo mysql_secure_installation`
     
 volg stappen
+
     `sudo systemctl enable mariadb`
 
 voor PHP
+
     `sudo yum install php php-mysql`
     `sudo systemctl restart httpd.service`
 
