@@ -25,3 +25,6 @@
 | delete a port| `firewall-cmd --remove-port=22/tcp` |
 | enable a service by name | `firewall-cmd [--permanent] [--zone=ZONE] --add-service=http` |
 | reload firewalld rules | `firewall-cmd --reload |
+
+## packages
+yum provides *bin/<programname>
