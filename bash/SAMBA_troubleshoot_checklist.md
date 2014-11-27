@@ -11,6 +11,7 @@
 
 * `systemctl list-units --type service|grep 'nmb\|smb'`
 * `sudo systemctl start nmb.service`
+
 ##check if other services have any problems
 * `systemctl list-units --type service`
 
