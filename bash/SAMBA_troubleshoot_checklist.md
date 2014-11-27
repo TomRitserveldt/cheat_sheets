@@ -4,9 +4,9 @@
 
 ## check if samba packages are installed
 * `yum list installed | grep samba`
-- samba-common
-- samba
-- samba-client
+* samba-common
+* samba
+* samba-client
 ##check if samba services are running
 
 * `systemctl list-units --type service|grep 'nmb\|smb'`
