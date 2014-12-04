@@ -28,6 +28,9 @@ following bools must be enabled:
 ## check if SELinux is running in enforcing mode
 
 * `getenforce`
+## check if selinux context is set correctly
+*  `ls -Z /srv/shares
+*  semanage fcontext -a -t public_content_rw_t /srv/shares
 
 ## check if samba is correctly configured
 * `testparm /etc/samba/smb.conf`
