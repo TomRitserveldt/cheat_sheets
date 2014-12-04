@@ -7,6 +7,8 @@
 * samba-common
 * samba
 * samba-client
+* libsemanage-python
+
 ##check if samba services are running
 
 * `systemctl list-units --type service|grep 'nmb\|smb'`
