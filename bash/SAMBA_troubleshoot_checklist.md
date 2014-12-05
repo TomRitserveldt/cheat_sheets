@@ -1,23 +1,23 @@
-## check if share folders exist and have the correct permissions, owner, group etc
+#### check if share folders exist and have the correct permissions, owner, group etc
 * cd to shares root
 * `ls -al`
 
-## check if samba packages are installed
+#### check if samba packages are installed
 * `yum list installed | grep samba`
 * samba-common
 * samba
 * samba-client
 * libsemanage-python
 
-##check if samba services are running
+####check if samba services are running
 
 * `systemctl list-units --type service|grep 'nmb\|smb'`
 * `sudo systemctl start nmb.service`
 
-##check if other services have any problems
+####check if other services have any problems
 * `systemctl list-units --type service`
 
-## check if the right SE bools are enabled
+#### check if the right SE bools are enabled
 * `getsebool -a | grep smb/samba`
 
 following bools must be enabled:
@@ -25,14 +25,15 @@ following bools must be enabled:
 * samba_enable_home_dirs
 * use_samba_home_dirs
 
-## check if SELinux is running in enforcing mode
+#### check if SELinux is running in enforcing mode
 
 * `getenforce`
-## check if selinux context is set correctly
-*  `ls -Z /srv/shares
+
+#### check if selinux context is set correctly
+*  `ls -Z /srv/shares`
 *  semanage fcontext -a -t public_content_rw_t /srv/shares
 
-## check if samba is correctly configured
+#### check if samba is correctly configured
 * `testparm /etc/samba/smb.conf`
 * `vi /etc/samba/smb.conf`
 * restart samba
@@ -60,7 +61,7 @@ example conf file:
  domain master = yes
  preferred master = yes
 
-## Make home directories accessible
+# Make home directories accessible
 [homes]
  comment = Home Directories
  browseable = no
