@@ -1,3 +1,19 @@
+1. check if cable is plugged in 
+2. check net adapters 
+3. check ip settings( ip address, default gateway: `ip route`, dns: `cat /etc/resolv.conf` ) 
+4. ping Default gateway, ping another machine, check dns server(cmd `dig`) 
+5. test the services 
+6. test connection (`wget, curl`) 
+
+Set correct ip address: `cd /etc/sysconfig/network-scripts/`
+open the correct config file (ifcfg-enp0s3 or ifcfg-enp0s8 etc.) 
+BOOTPROTO="static" 
+IPADRR=192.168.56.14 
+NETMASK=255.255.255.0 
+NM_CONTROLLED=no 
+ONBOOT="yes" 
+`systemctl restart network.service` & check the ip address `ip a`
+
 #### check if share folders exist and have the correct permissions, owner, group etc
 * cd to shares root
 * `ls -al`
