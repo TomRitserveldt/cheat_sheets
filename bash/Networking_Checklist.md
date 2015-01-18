@@ -1,7 +1,11 @@
 1. check if cable is plugged in
 1. check net adapters
-1. check ip settings( ip address, default gateway, dns)
-1. ping Default gateway, ping another machine, check dns server(cmd dig)
+1. check ip settings( ip address, default gateway(ip r), dns, traceroute(tracert))
+  * cat /etc/resolv.conf
+  * VBox NAT: 10.0.2.3
+  * of 8.8.8.8
+  * dns requests met: dig, host, nslookup
+1. ping Default gateway, ping another machine,ping dns server
 1. test the services
 1. test connection (wget, curl)
 
@@ -21,9 +25,14 @@
 ##Check if services are running
 * `sudo netstat -tlnp`
 * `systemctl list-units --type service`
+* `sudo systemctl status httpd.service`
+* `sudo ss -tulpn`
+* `sudo ps -ef`
 
 ## check firewall settings
 * `firewall-cmd --list-all`
 * `firewall-cmd --permanent --zone=public --add-service=http`
 * `firewall-cmd --reload`
 
+## checking ports
+* eg `nmap -A -T4`
