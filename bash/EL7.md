@@ -33,3 +33,8 @@
 * `getsebool -a | grep <name>`
 * `setsebool <boolean> "value"`
 * `semanage fcontext -a -t public_content_rw_t /srv/shares`
+* `getenforce`
+
+#### check if selinux context is set correctly
+*  `ls -Z /srv/shares`
+*  semanage fcontext -a -t public_content_rw_t /srv/shares
