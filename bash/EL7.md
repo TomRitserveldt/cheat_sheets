@@ -38,3 +38,11 @@
 #### check if selinux context is set correctly
 *  `ls -Z /srv/shares`
 *  semanage fcontext -a -t public_content_rw_t /srv/shares
+
+#### journalctl
+* journalctl -f (last 10 logs)
+* journalctl -b (logs on boot)
+* journalctl -b -p err (logs on boot, of priority lvl or worse)
+* journalctl --since=yesterday
+* journalctl --since=2012-10-15 --until="2011-10-16 23:59:59"
+* journalctl -u httpd --since=00:00 --until=9:30
